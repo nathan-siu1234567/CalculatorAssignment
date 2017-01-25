@@ -1,0 +1,21 @@
+{
+  "name": "calculator",
+  "description": "jQuery Calculator",
+  "main": "index.js",
+  "authors": [
+    "nathan-siu <nathansiu9730@gmail.com>"
+  ],
+  "license": "ISC",
+  "homepage": "",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "jquery": "2.1.4",
+    "jquery-mobile-bower": "^1.4.5"
+  }
+}

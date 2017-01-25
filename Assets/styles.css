@@ -1,0 +1,25 @@
+#outputScreen{
+	height:100px; font-size:50px; text-align: right;
+	
+}
+#number{
+	font-size:125%;
+}
+#function{
+	font-size:125%;
+}
+#DecimalPoint{
+	font-size:125%;
+	
+}
+#Equals{
+	font-size:125%;
+	
+}
+#gridc{
+	padding-top:5px;
+}
+#zero{
+	font-size:125%;
+	
+}
