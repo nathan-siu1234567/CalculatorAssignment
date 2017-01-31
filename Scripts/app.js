@@ -1,28 +1,39 @@
 $(document).ready(function(){
 
     var result =0;
-    var oldEntry =0;
+    var oldInput =0;
     var operator = null;
-    var currentEntry =0;
-    //displayScreen(result);
+    var currentInput =0;
+    displayScreen(result);
 
     //number click function
-    $('.numberButton').on('click',function(){
+    $('.calcButton').on('click',function(){
         var value = $(this).html();
         console.log(value);
-
-        if(currentEntry === '0')
+    if(!isNaN(value))
+    {
+        if(currentInput === '0')
         {
-            currentEntry = value;
+            currentInput=value;
+            
         }
-        displayScreen(currentEntry);
+        else
+        {
+            currentInput + value;
+        }
+    }
+
+        
+    displayScreen(currentInput);
 
     });
 
 
 });
+
 //update screen function
 displayScreen = function(outputVal) {
   var outputVal = outputVal.toString();
   $('.screen').html(outputVal.substring(0, 10));
 };
+

@@ -13,31 +13,33 @@
     <header data-role="header">
       <h1>Calculator</h1>
     </header>
-    
+
+    <div class="screen">
       <input type="text" class="screen" id="outputScreen" value=0 readonly />
-	
+    </div>
+
 	 <div class="ui-grid-c" id="gridc">
-     <div class="ui-block-a"><button data-theme="b" id="function">AC</button></div>
-        <div class="ui-block-b"><button data-theme="b" id="function">+/-</button></div>
-		<div class="ui-block-c"><button data-theme="b" id="function">%</button></div>
-		<div class="ui-block-d"><button data-theme="a" id="function" >/</button></div>
-        <div class="ui-block-a"><button data-theme="b" class="numberButton" id="number" value="7" >7</button></div>
-        <div class="ui-block-b"><button data-theme="b" class="numberButton" id="number" >8</button></div>
-        <div class="ui-block-c"><button data-theme="b" class="numberButton" id="number" >9</button></div>
-        <div class="ui-block-d"><button data-theme="a" id="function" >*</button></div>
-        <div class="ui-block-a"><button data-theme="b" class="numberButton" id="number" >4</button></div>
-        <div class="ui-block-b"><button data-theme="b" class="numberButton" id="number">5</button></div>
-        <div class="ui-block-c"><button data-theme="b" class="numberButton" id="number">6</button></div>
-        <div class="ui-block-d"><button data-theme="a" class="numberButton" id="function" >-</button></div>
-        <div class="ui-block-a"><button data-theme="b" class="numberButton" id="number" >1</button></div>
-        <div class="ui-block-b"><button data-theme="b" class="numberButton" id="number" >2</button></div>
-        <div class="ui-block-c"><button data-theme="b" class="numberButton" id="number" >3</button></div>
-        <div class="ui-block-d"><button data-theme="a" id="function" >+</button></div>
+     <div class="ui-block-a"><button data-theme="b" id="function" class="calcButton">AC</button></div>
+        <div class="ui-block-b"><button data-theme="b" id="function" calcButton="calcButton">+/-</button></div>
+		<div class="ui-block-c"><button data-theme="b" id="function" class="calcButton">%</button></div>
+		<div class="ui-block-d"><button data-theme="a" id="function" class="calcButton">/</button></div>
+        <div class="ui-block-a"><button data-theme="b" class="calcButton" id="number" value="7" >7</button></div>
+        <div class="ui-block-b"><button data-theme="b" class="calcButton" id="number" >8</button></div>
+        <div class="ui-block-c"><button data-theme="b" class="calcButton" id="number" >9</button></div>
+        <div class="ui-block-d"><button data-theme="a" id="function" class="calcButton" >*</button></div>
+        <div class="ui-block-a"><button data-theme="b" class="calcButton" id="number" >4</button></div>
+        <div class="ui-block-b"><button data-theme="b" class="calcButton" id="number">5</button></div>
+        <div class="ui-block-c"><button data-theme="b" class="calcButton" id="number">6</button></div>
+        <div class="ui-block-d"><button data-theme="a" class="calcButton" id="function" >-</button></div>
+        <div class="ui-block-a"><button data-theme="b" class="calcButton" id="number" >1</button></div>
+        <div class="ui-block-b"><button data-theme="b" class="calcButton" id="number" >2</button></div>
+        <div class="ui-block-c"><button data-theme="b" class="calcButton" id="number" >3</button></div>
+        <div class="ui-block-d"><button data-theme="a" id="function" class="calcButton" >+</button></div>
 			<div class="ui-block-a"><button data-theme="b" class="numberButton" id="zero" >0</button></div>
       <!--<div class="ui-block-b" data-theme="b"></div>-->
         
-		<div class="ui-block-c"><button data-theme="b" id="DecimalPoint">.</button></div>
-        <div class="ui-block-d"><button data-theme="a" id="Equals" >=</button></div>
+		<div class="ui-block-c"><button data-theme="b" id="DecimalPoint" class="calcButton">.</button></div>
+        <div class="ui-block-d"><button data-theme="a" id="Equals" class="equals" class="calcButton" >=</button></div>
         
       </div>
 	 <!-- JavaScript Section -->
