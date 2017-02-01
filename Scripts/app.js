@@ -10,19 +10,24 @@ $(document).ready(function(){
     $('.calcButton').on('click',function(){
         var value = $(this).html();
         console.log(value);
-    if(!isNaN(value))
-    {
-        if(currentInput === '0')
+        if(value === "AC")
         {
-            currentInput=value;
-            
+            result ='0';
+            currentInput='0';
         }
-        else
+        else if(value === '+/-')
         {
-            currentInput + value;
+            currentInput * -1;
         }
-    }
-
+        else if(value === '%')
+        {
+            currentInput = currentInput/100;
+        }
+        else if(!isNaN(value))
+        {
+            if(currentInput ==='0') currentInput=value;
+            else currentInput = currentInput + value;
+        }
         
     displayScreen(currentInput);
 
