@@ -10,6 +10,17 @@ $(document).ready(function(){
     $('.calcButton').on('click',function(){
         var value = $(this).html();
         console.log(value);
+        if(!isNaN(value))
+        {
+            if(currentInput ==='0') currentInput=value;
+            else currentInput = currentInput + value;
+        }
+        else if(value ==='+' || value ==='-' || value==='/' || value==='*')
+        {
+            oldInput = parseFloat(currentInput);
+            operator = value;
+            currentInput=' ';
+        }
         if(value === "AC")
         {
             result ='0';
@@ -17,17 +28,18 @@ $(document).ready(function(){
         }
         else if(value === '+/-')
         {
-            currentInput * -1;
+            currentInput=currentInput * -1;
         }
         else if(value === '%')
         {
             currentInput = currentInput/100;
         }
-        else if(!isNaN(value))
+        else if(value === '=')
         {
-            if(currentInput ==='0') currentInput=value;
-            else currentInput = currentInput + value;
+            currentInput = calculate(oldInput,currentInput,operator);
+            operator =null;
         }
+      
         
     displayScreen(currentInput);
 
@@ -42,3 +54,26 @@ displayScreen = function(outputVal) {
   $('.screen').html(outputVal.substring(0, 10));
 };
 
+calculate=function(num1,num2,operator)
+{
+    num1 =parseFloat(num1);
+    num2 = parseFloat(num2);
+
+    console.log(num1,num2,operator);
+    if(operator ==='+')
+    {
+        return num1+num2;
+    }
+    if(operator ==='-')
+    {
+        return num1-num2;
+    }
+    if(operator ==='/')
+    {
+        return num1/num2;
+    }
+    if(operator ==='*')
+    {
+        return num1*num2;
+    }
+}
