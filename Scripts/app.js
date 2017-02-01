@@ -9,13 +9,11 @@ $(document).ready(function(){
     var oldInput =0;
     var operator = null;
     var currentInput = '0';
-    displayScreen(result);
-    
+    displayScreen(result);  
 
     //button click function
     $('.calcButton').on('click',function(){
         var value = $(this).html();
-        console.log(value);
 
         //number validation
         if(!isNaN(value))
@@ -73,7 +71,6 @@ calculate=function(num1,num2,operator)
     num1 =parseFloat(num1);
     num2 = parseFloat(num2);
 
-    console.log(num1,num2,operator);
     if(operator ==='+')
     {
         return num1+num2;
