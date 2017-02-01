@@ -1,3 +1,8 @@
+/*Author:Nathan Siu
+  File name: style.css
+  File Description: css for the calculator UI 
+  Date: 1/31/2017*/
+
 #outputScreen{
 	height:100px; font-size:50px; text-align: right;
 	

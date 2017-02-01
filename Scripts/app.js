@@ -1,3 +1,7 @@
+// Author:Nathan Siu
+//Date: 1/31/2017
+//File Name: app.js
+//File Description: This is the backend for the calculator UI
 $(document).ready(function(){
 
     //variables
