@@ -1,20 +1,25 @@
 $(document).ready(function(){
 
+    //variables
     var result =0;
     var oldInput =0;
     var operator = null;
-    var currentInput =0;
+    var currentInput = '0';
     displayScreen(result);
+    
 
-    //number click function
+    //button click function
     $('.calcButton').on('click',function(){
         var value = $(this).html();
         console.log(value);
+
+        //number validation
         if(!isNaN(value))
         {
             if(currentInput ==='0') currentInput=value;
             else currentInput = currentInput + value;
         }
+        //operator validation
         else if(value ==='+' || value ==='-' || value==='/' || value==='*')
         {
             oldInput = parseFloat(currentInput);
@@ -34,13 +39,17 @@ $(document).ready(function(){
         {
             currentInput = currentInput/100;
         }
+        else if(value ==='.')
+        {
+            currentInput += '.';
+        }
         else if(value === '=')
         {
             currentInput = calculate(oldInput,currentInput,operator);
             operator =null;
         }
       
-        
+        //sending current input to the screen method
     displayScreen(currentInput);
 
     });
@@ -48,12 +57,13 @@ $(document).ready(function(){
 
 });
 
-//update screen function
+//display screen function
 displayScreen = function(outputVal) {
   var outputVal = outputVal.toString();
   $('.screen').html(outputVal.substring(0, 10));
 };
 
+//calcuate function
 calculate=function(num1,num2,operator)
 {
     num1 =parseFloat(num1);
@@ -77,3 +87,4 @@ calculate=function(num1,num2,operator)
         return num1*num2;
     }
 }
+
